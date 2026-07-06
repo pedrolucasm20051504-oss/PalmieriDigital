@@ -634,6 +634,7 @@ h1{
 
 .step p{
   margin:0;
+  grid-column:2;
 }
 
 .about-box{
@@ -787,6 +788,10 @@ h1{
     grid-template-columns:1fr;
   }
 
+  .step p{
+    grid-column:1;
+  }
+
   .footer{
     flex-direction:column;
     align-items:flex-start;
@@ -799,5 +804,69 @@ h1{
   .whatsapp-float{
     right:14px;
     bottom:14px;
+  }
+}
+
+
+/* Correções de responsividade para evitar texto cortado no desktop */
+h1, h2, h3, p, a, span, li{
+  overflow-wrap:break-word;
+}
+
+.hero{
+  overflow:hidden;
+}
+
+.hero-content{
+  min-width:0;
+}
+
+.section-head,
+.intro p,
+.about-box,
+.cta-content{
+  min-width:0;
+}
+
+.steps{
+  width:100%;
+}
+
+.step{
+  min-width:0;
+}
+
+.step h3,
+.step p{
+  min-width:0;
+}
+
+@media(max-width:1200px){
+  .hero{
+    grid-template-columns:1fr;
+    text-align:center;
+    min-height:auto;
+  }
+
+  .hero-content{
+    margin:0 auto;
+  }
+
+  .hero-actions{
+    justify-content:center;
+  }
+}
+
+@media(min-width:1051px){
+  .step{
+    grid-template-columns:80px minmax(0,1fr);
+  }
+
+  .step h3{
+    grid-column:2;
+  }
+
+  .step p{
+    grid-column:2;
   }
 }
