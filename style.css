@@ -121,11 +121,10 @@ h1{
 
 .solution-grid{
   display:grid;
-  grid-template-columns:repeat(6,1fr);
+  grid-template-columns:repeat(4,1fr);
   gap:20px;
 }
 .solution-card{
-  grid-column:span 2;
   border:1px solid rgba(15,17,21,.08);
   background:rgba(255,255,255,.82);
   border-radius:var(--radius);
@@ -136,7 +135,6 @@ h1{
   flex-direction:column;
 }
 .solution-card.active{
-  grid-column:span 3;
   background:linear-gradient(135deg,#ffffff,#eefaff 54%,#f4efff);
 }
 .solution-card.soon{
@@ -291,7 +289,6 @@ h1{
 
 @media(max-width:1100px){
   .solution-grid,.web-grid,.showcase-grid{grid-template-columns:1fr 1fr}
-  .solution-card,.solution-card.active{grid-column:span 1}
 }
 @media(max-width:760px){
   .header{align-items:flex-start}
