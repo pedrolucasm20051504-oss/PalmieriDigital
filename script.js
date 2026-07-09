@@ -28,4 +28,48 @@ document.addEventListener("DOMContentLoaded", () => {
     item.style.transitionDelay = `${Math.min(index * 60, 360)}ms`;
     observer.observe(item);
   });
+
+
+  const storyPanels = document.querySelectorAll('.story-panel');
+  storyPanels.forEach((panel) => {
+    let touchStartY = null;
+    let autoPlayed = false;
+
+    const setSolved = (value) => panel.classList.toggle('solved', value);
+    const toggleSolved = () => panel.classList.toggle('solved');
+
+    panel.addEventListener('click', toggleSolved);
+
+    panel.addEventListener('wheel', (event) => {
+      if (Math.abs(event.deltaY) < 4) return;
+      event.preventDefault();
+      setSolved(event.deltaY > 0);
+    }, { passive: false });
+
+    panel.addEventListener('touchstart', (event) => {
+      touchStartY = event.touches[0].clientY;
+    }, { passive: true });
+
+    panel.addEventListener('touchend', (event) => {
+      if (touchStartY === null) return;
+      const currentY = event.changedTouches[0].clientY;
+      const deltaY = touchStartY - currentY;
+      if (Math.abs(deltaY) > 24) {
+        setSolved(deltaY > 0);
+      }
+      touchStartY = null;
+    }, { passive: true });
+
+    const panelObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting && !autoPlayed) {
+          autoPlayed = true;
+          setTimeout(() => setSolved(true), 750);
+        }
+      });
+    }, { threshold: 0.55 });
+
+    panelObserver.observe(panel);
+  });
+
 });
