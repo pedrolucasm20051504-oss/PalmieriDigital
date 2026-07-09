@@ -979,3 +979,11 @@ h1{
   .pill-c{left:12px !important;bottom:22px !important}
   .pill-d{right:12px !important;bottom:22px !important}
 }
+
+
+/* Correção v10 — move o balão Landing Page para não cobrir a logo PS */
+.offer-floating.two{
+  left:36px !important;
+  right:auto !important;
+  top:185px !important;
+}
