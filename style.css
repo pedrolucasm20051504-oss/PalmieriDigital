@@ -787,3 +787,195 @@ h1{
   .pill-c{left:14px !important;bottom:26px !important}
   .pill-d{right:14px !important;bottom:26px !important}
 }
+
+
+/* Correção v9 — centraliza Desafio/Solução e mantém a arte dentro do card */
+.story-panel{
+  overflow:hidden !important;
+  padding:42px !important;
+  max-width:1180px !important;
+}
+
+.story-stage{
+  min-height:500px !important;
+  overflow:hidden !important;
+}
+
+.story-face{
+  display:grid !important;
+  grid-template-columns:minmax(0,1fr) minmax(0,1fr) !important;
+  grid-template-rows:1fr !important;
+  align-items:center !important;
+  gap:48px !important;
+  padding:38px !important;
+}
+
+.story-left{
+  display:flex !important;
+  flex-direction:column !important;
+  justify-content:center !important;
+  gap:34px !important;
+  min-width:0 !important;
+  height:100% !important;
+}
+
+.story-badge{
+  position:relative !important;
+  width:100% !important;
+  max-width:520px !important;
+  align-self:center !important;
+  margin:0 !important;
+  text-align:center !important;
+}
+
+.story-visual{
+  width:100% !important;
+  max-width:520px !important;
+  min-height:280px !important;
+  max-height:300px !important;
+  align-self:center !important;
+  margin:0 !important;
+  overflow:hidden !important;
+}
+
+.story-copy{
+  align-self:center !important;
+}
+
+.story-copy h3{
+  margin-top:0 !important;
+}
+
+.story-icon{
+  width:128px !important;
+  height:128px !important;
+  font-size:72px !important;
+}
+
+.story-pill{
+  font-size:13px !important;
+  padding:10px 14px !important;
+}
+
+.pill-a{top:24px !important;left:24px !important}
+.pill-b{top:64px !important;right:24px !important}
+.pill-c{left:24px !important;bottom:32px !important}
+.pill-d{right:24px !important;bottom:32px !important}
+
+.story-hint{
+  position:absolute !important;
+  bottom:18px !important;
+  left:0 !important;
+  right:0 !important;
+  z-index:20 !important;
+}
+
+/* Correção v9 — logo PS oficial no bloco Soluções Digitais */
+.offer-logo-mark{
+  width:138px !important;
+  height:98px !important;
+  border-radius:30px !important;
+  background:#08090b !important;
+  color:#fff !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  font-family:"Sora",sans-serif !important;
+  font-size:0 !important;
+  font-weight:800 !important;
+  letter-spacing:-2px !important;
+  overflow:hidden !important;
+  isolation:isolate !important;
+}
+
+.offer-logo-mark span{
+  position:relative !important;
+  z-index:3 !important;
+  font-size:46px !important;
+  line-height:1 !important;
+}
+
+.offer-logo-mark:before{
+  content:"" !important;
+  position:absolute !important;
+  inset:auto -12px -16px auto !important;
+  width:78px !important;
+  height:78px !important;
+  border-radius:50% !important;
+  background:linear-gradient(135deg,var(--blue1),var(--blue3)) !important;
+  opacity:.92 !important;
+  z-index:1 !important;
+}
+
+.offer-logo-mark:after{
+  display:none !important;
+}
+
+@media(max-width:1100px){
+  .story-stage{
+    min-height:760px !important;
+  }
+
+  .story-face{
+    grid-template-columns:1fr !important;
+    gap:26px !important;
+    padding:24px !important;
+  }
+
+  .story-left{
+    gap:24px !important;
+  }
+
+  .story-visual{
+    min-height:300px !important;
+    max-height:320px !important;
+  }
+}
+
+@media(max-width:760px){
+  .story-panel{
+    padding:18px !important;
+  }
+
+  .story-stage{
+    min-height:700px !important;
+  }
+
+  .story-face{
+    padding:10px !important;
+    gap:18px !important;
+  }
+
+  .story-left{
+    gap:18px !important;
+  }
+
+  .story-visual{
+    min-height:260px !important;
+    max-height:280px !important;
+  }
+
+  .story-copy h3{
+    font-size:clamp(28px,9vw,40px) !important;
+  }
+
+  .story-copy p{
+    font-size:15.5px !important;
+  }
+
+  .story-icon{
+    width:106px !important;
+    height:106px !important;
+    font-size:58px !important;
+  }
+
+  .story-pill{
+    font-size:11.5px !important;
+    padding:8px 10px !important;
+  }
+
+  .pill-a{top:16px !important;left:12px !important}
+  .pill-b{top:54px !important;right:12px !important}
+  .pill-c{left:12px !important;bottom:22px !important}
+  .pill-d{right:12px !important;bottom:22px !important}
+}
