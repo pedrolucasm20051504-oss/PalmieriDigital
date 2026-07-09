@@ -307,3 +307,30 @@ h1{
   .footer p{text-align:left}
   .whatsapp-float{right:14px;bottom:14px}
 }
+
+/* Páginas internas */
+.page-hero{min-height:72vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:90px clamp(18px,6vw,88px);background:radial-gradient(circle at 18% 12%, rgba(87,214,245,.18), transparent 30%),radial-gradient(circle at 82% 18%, rgba(122,82,217,.16), transparent 30%)}
+.feature-section{background:var(--off)}
+.feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.feature-card{background:white;border:1px solid rgba(15,17,21,.08);border-radius:24px;padding:26px;box-shadow:0 12px 34px rgba(15,17,21,.06)}
+.feature-card h3{font-size:22px}
+.feature-card p{color:var(--text);line-height:1.65}
+.preview-gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.preview-window{border:1px solid rgba(15,17,21,.08);background:white;border-radius:26px;padding:12px;box-shadow:0 16px 46px rgba(15,17,21,.08)}
+.window-top{height:38px;display:flex;align-items:center;gap:7px;padding:0 10px}
+.window-top span{width:9px;height:9px;border-radius:50%;background:#d6dbe7}
+.project-frame{min-height:330px;border-radius:20px;padding:22px;color:white;position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end}
+.project-frame:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg, transparent 0%, rgba(0,0,0,.74) 100%),radial-gradient(circle at 78% 18%, rgba(255,255,255,.24), transparent 34%)}
+.project-frame h3,.project-frame p,.project-frame .watermark{position:relative;z-index:2}
+.project-frame h3{font-size:34px}
+.project-frame p{margin:8px 0 0;opacity:.86}
+.preview-window > h3{font-size:22px;margin:18px 10px 8px}
+.preview-window > p{color:var(--text);line-height:1.6;margin:0 10px 12px}
+.wedding-gold{background:linear-gradient(135deg,#f7efe4,#8e713b 48%,#111)}
+.party-pink{background:linear-gradient(135deg,#ffdde8,#bf5d89 48%,#241020)}
+.modern-blue{background:linear-gradient(135deg,#57d6f5,#3c5bff 55%,#101116)}
+.commerce-green{background:linear-gradient(135deg,#b9f6d0,#00a884 48%,#0f1115)}
+.portfolio-purple{background:linear-gradient(135deg,#b59bff,#7a52d9 52%,#111)}
+.elegant-dark{background:linear-gradient(135deg,#333,#0f1115 58%,#3c5bff)}
+@media(max-width:1100px){.feature-grid,.preview-gallery{grid-template-columns:1fr 1fr}}
+@media(max-width:760px){.page-hero{min-height:auto;padding-top:70px;padding-bottom:70px}.feature-grid,.preview-gallery{grid-template-columns:1fr}.project-frame{min-height:280px}}
