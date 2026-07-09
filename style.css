@@ -487,3 +487,150 @@ h1{
   .offer-logo-mark{width:110px;height:110px;font-size:38px;right:36px;top:140px}
   .offer-floating{font-size:13px;padding:10px 12px}
 }
+
+
+/* Correção v7 — Desafio x Solução sem cortes */
+.story-panel{
+  overflow:visible;
+  padding:34px;
+}
+
+.story-stage{
+  min-height:520px;
+}
+
+.story-face{
+  padding:30px;
+  grid-template-columns:1fr 1fr;
+}
+
+.story-visual{
+  min-height:380px;
+  align-self:center;
+  overflow:visible;
+}
+
+.story-hint{
+  position:relative;
+  z-index:5;
+  padding-top:8px;
+}
+
+/* Reorganiza os balões para não ficarem cortados nas laterais */
+.pill-a{top:34px;left:34px}
+.pill-b{top:74px;right:34px}
+.pill-c{left:34px;bottom:58px}
+.pill-d{right:34px;bottom:58px}
+
+/* Deixa o bloco de soluções mais alinhado com a identidade Palmieri */
+.offer-canvas{
+  background:
+    radial-gradient(circle at 74% 36%, rgba(87,214,245,.16), transparent 24%),
+    radial-gradient(circle at 28% 72%, rgba(60,91,255,.14), transparent 26%),
+    linear-gradient(135deg,#0f1115,#161b28 58%,#11151f);
+}
+
+.offer-logo-mark{
+  background:#08090b;
+  color:#fff;
+  width:138px;
+  height:98px;
+  border-radius:30px;
+  font-size:46px;
+  letter-spacing:-2px;
+  font-family:"Sora",sans-serif;
+  position:absolute;
+  overflow:hidden;
+}
+
+.offer-logo-mark:after{
+  content:"";
+  position:absolute;
+  right:-12px;
+  bottom:-16px;
+  width:78px;
+  height:78px;
+  border-radius:50%;
+  background:linear-gradient(135deg,var(--blue1),var(--blue3));
+  opacity:.92;
+  z-index:0;
+}
+
+.offer-logo-mark{
+  isolation:isolate;
+}
+
+.offer-logo-mark::before{
+  content:"PS";
+  position:relative;
+  z-index:2;
+}
+
+/* Oculta o texto cru antigo dentro da marca para usar o pseudo-elemento limpo */
+.offer-logo-mark{
+  font-size:0;
+}
+
+.offer-card.large{
+  background:linear-gradient(135deg,rgba(87,214,245,.16),rgba(60,91,255,.10));
+}
+
+.offer-card.small{
+  background:linear-gradient(135deg,rgba(255,255,255,.88),rgba(87,214,245,.18));
+}
+
+@media(max-width:1100px){
+  .story-panel{
+    padding:24px;
+  }
+
+  .story-stage{
+    min-height:760px;
+  }
+
+  .story-face{
+    grid-template-columns:1fr;
+  }
+
+  .story-visual{
+    min-height:360px;
+  }
+}
+
+@media(max-width:760px){
+  .story-panel{
+    padding:18px;
+    overflow:hidden;
+  }
+
+  .story-stage{
+    min-height:760px;
+  }
+
+  .story-face{
+    padding:8px;
+  }
+
+  .story-copy h3{
+    font-size:clamp(30px,10vw,44px);
+  }
+
+  .story-copy p{
+    font-size:16px;
+  }
+
+  .story-visual{
+    min-height:330px;
+  }
+
+  .pill-a{top:22px;left:16px}
+  .pill-b{top:74px;right:16px}
+  .pill-c{left:16px;bottom:34px}
+  .pill-d{right:16px;bottom:34px}
+
+  .offer-logo-mark{
+    width:112px;
+    height:80px;
+    border-radius:24px;
+  }
+}
